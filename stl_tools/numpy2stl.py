@@ -1,11 +1,8 @@
 import struct
 import numpy as np
 from itertools import product
-try:
-    from .cwrapped import tessellate
-    c_lib = True
-except ImportError:
-    c_lib = False
+
+c_lib = False
 
 ASCII_FACET = """  facet normal  {face[0]:e}  {face[1]:e}  {face[2]:e}
     outer loop
